@@ -1,32 +1,21 @@
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Stack;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        int num = sc.nextInt();
+        int index[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            index[i] = sc.nextInt();
+        }
 
-        for(int i = 0; i < num; i++){
-            String str1 = sc.next();
-            String str2 = sc.next();
+        Stack<Integer> stack = new Stack<>();
 
-            HashMap<Character, Integer> map1 = new HashMap<>();
-            HashMap<Character, Integer> map2 = new HashMap<>();
-
-            for(int j = 0; j < str1.length(); j++){
-                map1.put(str1.charAt(j), map1.getOrDefault(str1.charAt(j), 0) + 1);
-            }
-            for(int j = 0; j < str2.length(); j++){
-                map2.put(str2.charAt(j), map2.getOrDefault(str2.charAt(j), 0) + 1);
-            }
-
-            if(map1.equals(map2)){
-                System.out.println("Possible");
-            }
-            else {
-                System.out.println("Impossible");
-            }
+        int j = 1;
+        while(true)
+        {
 
         }
     }
